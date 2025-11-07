@@ -23,11 +23,9 @@ public class BoundaryAcheterProduit {
 				System.out.println("Desole, personne ne vend ce produit au marche.");
 			} else {
 				StringBuilder question2 = new StringBuilder();
-<<<<<<< HEAD
-				question2.append("Chez quel commercant voulez-vous acheter des ").append(produit);
-=======
+
 				question2.append("Chez quel commercant voulez-vous acheter des ").append(produit).append("? \n");
->>>>>>> ae9fee2d1e320413951e13b119eb4d12685b7cfc
+
 				for (int i = 0; i < vendeurs.length; i++) {
 					question2.append(i + 1).append(" - ").append(vendeurs[i].getNom()).append("\n");
 				}
@@ -39,15 +37,6 @@ public class BoundaryAcheterProduit {
 						.append("\n");
 				question3.append("Combien de ").append(produit).append(" voulez-vous acheter ?\n");
 				int quantiteAcheter = Clavier.entrerEntier(question3.toString());
-<<<<<<< HEAD
-				
-				int achat = controlAcheterProduit.acheterProduit(nomVendeur, quantiteAcheter);
-				if (achat == 0) {
-					System.out.println(nomAcheteur + " veut acheter " + quantiteAcheter + " " + produit + ", malheureseument il n'y en a plus!");
-				} else if (achat < quantiteAcheter) {
-					// finir d'écrire les derniers syso 
-					System.out.println(nomAcheteur + "");
-=======
 
 				int achat = controlAcheterProduit.acheterProduit(nomVendeur, quantiteAcheter);
 				if (achat == 0) {
@@ -59,7 +48,7 @@ public class BoundaryAcheterProduit {
 							+ " achete tout le stock de " + nomVendeur + ".\n");
 				} else {
 					System.out.println(nomAcheteur + " achete " + achat + " " + produit + " Ã  " + nomVendeur + " .\n");
->>>>>>> ae9fee2d1e320413951e13b119eb4d12685b7cfc
+
 				}
 			}
 		}
