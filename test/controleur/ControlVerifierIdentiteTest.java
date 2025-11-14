@@ -3,10 +3,10 @@ package controleur;
 import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import personnages.Chef;
+import personnages.Gaulois;
 import villagegaulois.Village;
 
 class ControlVerifierIdentiteTest {
@@ -23,13 +23,22 @@ class ControlVerifierIdentiteTest {
 	
 	@Test
 	void testControlVerifierIdentite() {
-		fail("Not yet implemented");
+		ControlVerifierIdentite controlVerifierIdentite = new ControlVerifierIdentite(village);
+		assertNotNull(controlVerifierIdentite, "Constructeur ne renvoie pas null");
+	}
+	
+	@Test
+	void testVerifierIdentite() {
+		ControlVerifierIdentite controlVerifierIdentite = new ControlVerifierIdentite(village);
+		Gaulois present = new Gaulois("present",10);
+		village.ajouterHabitant(present);
+		assertTrue(controlVerifierIdentite.verifierIdentite("present"));
 	}
 
 	@Test
-	@DisplayName("hello")
-	void testVerifierIdentite() {
-		fail("Not yet implemented");
+	void testVerifierMauvaiseIdentite() {
+		ControlVerifierIdentite controlVerifierIdentite = new ControlVerifierIdentite(village);
+		assertFalse(controlVerifierIdentite.verifierIdentite("absent")); 
 	}
 
 }
