@@ -27,7 +27,7 @@ public class ControlAcheterProduit {
 	
 	// retourne : 
 	// - 0 si l'etl n'a plus de produit 
-	// - la quantité vendu : < quaniteAchete si il n'en a pas assez 
+	// - la quantitï¿½ vendu : < quaniteAchete si il n'en a pas assez 
 	public int acheterProduit(String nomVendeur, int quaniteAchete) {
 		Etal etal = controlTrouverEtalVendeur.trouverEtalVendeur(nomVendeur);
 		return etal.acheterProduit(quaniteAchete);

@@ -34,6 +34,12 @@ class ControlVerifierIdentiteTest {
 		village.ajouterHabitant(present);
 		assertTrue(controlVerifierIdentite.verifierIdentite("present"));
 	}
+	
+	@Test
+	void testVerifierIdentiteChef() {
+		ControlVerifierIdentite controlVerifierIdentite = new ControlVerifierIdentite(village);
+		assertTrue(controlVerifierIdentite.verifierIdentite("chef"));
+	}
 
 	@Test
 	void testVerifierMauvaiseIdentite() {
